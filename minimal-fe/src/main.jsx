@@ -5,7 +5,7 @@ import DailyViz from './DailyViz'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <BrowserRouter>
+    <BrowserRouter basename="/dailyviz">
       <Routes>
         <Route path="/" element={<DailyViz />} />
       </Routes>
