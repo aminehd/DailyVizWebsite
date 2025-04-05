@@ -3,6 +3,7 @@ name: Auto-Update Frontend
 on:
   push:
     branches: [main]  # Or whatever your main branch is called
+  workflow_dispatch:  # Allows manual triggering from GitHub UI
 
 jobs:
   deploy:
