@@ -34,7 +34,7 @@ const DailyViz = () => {
           textShadow: '0 0 5px rgba(0, 255, 0, 0.5)',
           fontFamily: 'monospace'
         }}>
-          PIXELATED D3 ANIMATIONS
+          D3 ANIMATIONS
         </h1>
         <a 
           href="/"  
