@@ -1,0 +1,19 @@
+name: Auto-Update Frontend
+
+on:
+  push:
+    branches: [main]  # Or whatever your main branch is called
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: SSH and pull latest code
+        uses: appleboy/ssh-action@master
+        with:
+          host: ${{ secrets.HOST }}
+          key: ${{ secrets.SSH_KEY }}
+          script: |
+            cd /root/workspace/PolyPortfolio/DailyVizWebsite
+            git pull
+            # No need to restart Docker since it's watching for file changes
