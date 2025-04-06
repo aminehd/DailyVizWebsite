@@ -1,0 +1,36 @@
+name: Auto-Update Frontend
+
+on:
+  push:
+    branches: [main]  # Or whatever your main branch is called
+  workflow_dispatch:  # Allows manual triggering from GitHub UI
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      # Adding the Private key to a Github Actions Workflow
+      - name: Install SSH Key
+        uses: shimataro/ssh-key-action@v2
+        with:
+          key: ${{ secrets.SSH_KEY }}
+          known_hosts: unnecessary
+
+      # Adding a correct known_hosts value
+      - name: Adding Known Hosts
+        run: ssh-keyscan -H 174.138.45.200  >> ~/.ssh/known_hosts
+      - name: Deploy application
+        uses: appleboy/ssh-action@master
+        with:
+          host: 174.138.45.200
+          username:  root
+          password: ${{ secrets.SSH_PASSWORD }} # Add this line for password
+          port: 22
+          key: ${{ secrets.SSH_KEY }}
+          script: |
+            cd /root/workspace/PolyPortfolio/DailyVizWebsite
+            git pull
+
