@@ -5,6 +5,7 @@ import BarChart from './pages/BarChart'
 import ColorfulGrid from './pages/ColorfulGrid'
 import MinimalistPixels from './pages/MinimalistPixels'
 import EmergentSystem from './pages/EmergentSystem'
+import FatWaves from './pages/FatWaves'
 
 const DailyViz = () => {
   const madeupdata = [
@@ -35,6 +36,8 @@ const DailyViz = () => {
           fontFamily: 'monospace'
         }}>
           D3 animations
+          <FatWaves />
+        <EmergentSystem />
         </h1>
         <a 
           href="/"  
