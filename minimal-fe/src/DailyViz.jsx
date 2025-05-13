@@ -6,7 +6,7 @@ import ColorfulGrid from './pages/ColorfulGrid'
 import MinimalistPixels from './pages/MinimalistPixels'
 import EmergentSystem from './pages/EmergentSystem'
 import FatWaves from './pages/FatWaves'
-
+import May12 from './pages/May12'
 const DailyViz = () => {
   const madeupdata = [
     { domain: "github.com", count: 1280 },
@@ -36,6 +36,7 @@ const DailyViz = () => {
           fontFamily: 'monospace'
         }}>
           D3 animations
+          <May12 />
           <FatWaves />
         <EmergentSystem />
         </h1>
