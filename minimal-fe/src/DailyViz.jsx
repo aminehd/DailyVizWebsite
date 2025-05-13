@@ -38,7 +38,7 @@ const DailyViz = () => {
           D3 animations
           <May12 />
           <FatWaves />
-        <EmergentSystem />
+        {/* <EmergentSystem /> */}
         </h1>
         <a 
           href="/"  
@@ -113,7 +113,7 @@ const DailyViz = () => {
       </div>
       
       {/* Bar Chart Section */}
-      <div style={{ 
+      {/* <div style={{ 
         marginBottom: '40px', 
         padding: '20px',
         border: '1px solid #0f0',
@@ -130,7 +130,7 @@ const DailyViz = () => {
         <div style={{ height: '400px', width: '100%' }}>
           <BarChart data={madeupdata} />
         </div>
-      </div>
+      </div> */}
     </div>
   )
 }
