@@ -7,6 +7,13 @@ import MinimalistPixels from './pages/MinimalistPixels'
 import EmergentSystem from './pages/EmergentSystem'
 import FatWaves from './pages/FatWaves'
 import May12 from './pages/May12'
+import May15 from './pages/May15'
+import May15_2 from './pages/May15_2'
+import May19 from './pages/May19'
+import May21 from './pages/May21'
+import May23 from './pages/May23'
+import May28 from './pages/May28'
+import June9 from './pages/June9'
 const DailyViz = () => {
   const madeupdata = [
     { domain: "github.com", count: 1280 },
@@ -21,7 +28,7 @@ const DailyViz = () => {
     { domain: "cnn.com", count: 38 },
     { domain: "washingtonpost.com", count: 35 },  
   ]
-  
+    
   return (
     <div style={{ maxWidth: '1200px', margin: '0 auto', padding: '20px' }}>
       <div style={{ 
@@ -36,6 +43,13 @@ const DailyViz = () => {
           fontFamily: 'monospace'
         }}>
           D3 animations
+          <June9 />
+          <May28 />
+          <May23 />
+          <May21 />
+          <May19 />
+          <May15_2 />
+          <May15   />
           <May12 />
           <FatWaves />
         {/* <EmergentSystem /> */}
