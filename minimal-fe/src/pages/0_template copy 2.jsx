@@ -1,5 +1,6 @@
 import { useEffect, useRef } from "react";
 import * as d3 from "d3";
+import { createBorder } from "../utils";
 
 const May12 = () => {
   const svgRef = useRef(null);
@@ -22,43 +23,9 @@ const May12 = () => {
     // Draw pixel border
     const frameGroup = svg.append("g").attr("class", "pixel-frame");
     
-    // Top and bottom borders
-    for (let x = 0; x < width; x += pixelSize) {
-      // Top border
-      frameGroup.append("rect")
-        .attr("x", x)
-        .attr("y", 0)
-        .attr("width", pixelSize)
-        .attr("height", pixelSize)
-        .attr("fill", frameColor);
-      
-      // Bottom border
-      frameGroup.append("rect")
-        .attr("x", x)
-        .attr("y", height - pixelSize)
-        .attr("width", pixelSize)
-        .attr("height", pixelSize)
-        .attr("fill", frameColor);
-    }
+    createBorder(frameGroup, width, height, pixelSize, frameColor);
     
-    // Left and right borders
-    for (let y = pixelSize; y < height - pixelSize; y += pixelSize) {
-      // Left border
-      frameGroup.append("rect")
-        .attr("x", 0)
-        .attr("y", y)
-        .attr("width", pixelSize)
-        .attr("height", pixelSize)
-        .attr("fill", frameColor);
-      
-      // Right border
-      frameGroup.append("rect")
-        .attr("x", width - pixelSize)
-        .attr("y", y)
-        .attr("width", pixelSize)
-        .attr("height", pixelSize)
-        .attr("fill", frameColor);
-    }
+   
     
     // Animation function
     let phase = 0;

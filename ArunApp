@@ -1,0 +1,25 @@
+to run app locally, run docker-compose up on pop-os 
+Portforward 83 in cursor and click on the link
+Copy paste template (no extra path)
+
+You need these in local 
+
+
+ee -5,7 +5,8 @e import DailyViz from "/DailyViz'
+ReactDOM. createRoot(document.getElementById('root')). renderC
+< React. StrictMode>
+‹BrowserRouter basename="/dailyviz">
++
++
+{/* ‹BrowserRouter basename="/dailyviz"> */}
+<BrowserRouter >
+‹Routes>
+< Route path="/" element={<DailyViz />} />
+</Routes>
+e -4,7 +4,7 @ import { resolve } from 'path"
+// https://vitejs.dev/config/
+export default defineConfig({
+base: '/dailyviz/',
++ // base: '/dailyviz/', plugins: [reactOl,
+server: {
+host: "0.0.0.0',

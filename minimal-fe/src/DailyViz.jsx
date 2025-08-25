@@ -14,6 +14,11 @@ import May21 from './pages/May21'
 import May23 from './pages/May23'
 import May28 from './pages/May28'
 import June9 from './pages/June9'
+import June17 from './pages/June17'
+import June19 from './pages/June19'
+import June21 from './pages/June21'
+import June01 from './pages/June01'
+import Aug25 from './pages/08_aug_25'
 const DailyViz = () => {
   const madeupdata = [
     { domain: "github.com", count: 1280 },
@@ -43,6 +48,11 @@ const DailyViz = () => {
           fontFamily: 'monospace'
         }}>
           D3 animations
+          <Aug25 />
+          <June01 />
+          <June21 />
+          <June19 />
+          <June17 />
           <June9 />
           <May28 />
           <May23 />
